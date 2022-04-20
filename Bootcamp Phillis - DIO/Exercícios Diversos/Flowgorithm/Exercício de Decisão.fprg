@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrador"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-07 10:17:42 "/>
+        <attribute name="created" value="QWRtaW5pc3RyYWRvcjtCQVNFWkVSQURBOzIwMjItMDQtMDc7IjA3OjAyOjUxICI7MzI3MA=="/>
+        <attribute name="edited" value="QWRtaW5pc3RyYWRvcjtCQVNFWkVSQURBOzIwMjItMDQtMDc7IjEwOjE3OjQyICI7MTszMzc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jan, fev, mar, abr, faturamento, comissao" type="Real" array="False" size=""/>
+            <input variable="jan"/>
+            <input variable="fev"/>
+            <input variable="mar"/>
+            <input variable="abr"/>
+            <assign variable="faturamento" expression="jan+fev+mar+abr"/>
+            <output expression="faturamento" newline="True"/>
+            <if expression="faturamento&gt;5000">
+                <then>
+                    <assign variable="comissao" expression="faturamento*.05"/>
+                    <output expression="&quot;Parab&#233;ns!! Voc&#234; bateu a meta, sua faixa &#233; de 5%. Sua comiss&#227;o &#233; de R$&quot;&amp;comissao" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="comissao" expression="faturamento*0.03"/>
+                    <output expression="&quot;Infelizmente, voc&#234; n&#227;o bateu a meta, sua faixa &#233; de 3%. Sua comiss&#227;o &#233; de R$&quot;&amp;comissao" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
