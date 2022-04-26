@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Display flex</title>
+ <style>
+     .flex {
+         max-width: 500px;
+         padding: 10px;
+         margin: 0;
+         border: 2px solid black;
+         display: flex;
+     }
+
+     .item{
+         background-color: olive;
+         margin: 5px;
+         text-align: center;
+         color: white;
+         flex: 1;
+        }
+
+        .item-column{
+         background-color: blueviolet;
+         margin: 5px;
+         text-align: center;
+         color: white;
+         flex: 1;
+        }
+
+        .flex-container{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        .flex-item{
+            background: blue;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .row{
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        
+        .row-reverse li{
+            background-color: red;
+        }
+
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+
+        .column2{
+            flex-direction: column;
+            min-height: 200px ;
+        }
+
+        .column li{
+            background-color: blueviolet;
+        }
+
+        .column-reverse{
+            float: right ;
+            flex-direction: column-reverse;
+        }
+
+        .column-reverse li{
+            background-color: orange;
+        }
+
+        .flex-container-wrap{
+            display: flex;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 300px;
+        }
+
+        .item-wrap{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-container-wrap-column{
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 300px;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+
+        .blue{
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .green{
+            background-color: lightgreen;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .orange{
+            background-color: orange;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+        .red{
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+        .violet{
+            background-color: violet;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+        .h{
+            padding-bottom: 200px;
+        }
+
+        .h2{
+            padding-bottom: 400px;
+        }
+        .flex-start{
+            justify-content: flex-start;
+        }
+
+        .flex-end{
+            justify-content: flex-end;
+        }
+
+        .flex-center{
+            justify-content: center;
+        }
+
+        .flex-space-between{
+            justify-content: space-between;
+        }
+        
+        .flex-space-around{
+            justify-content: space-around;
+        }
+
+        .align-item-center{
+            align-items: center;
+        }
+
+        .align-item-stretch{
+            align-items: stretch;
+        }
+
+        .align-item-flex-start{
+            align-items: flex-start;
+        }
+
+        .align-item-flex-end{
+            align-items: flex-end;
+        }
+
+        .align-item-baseline{
+            align-items: baseline;
+        }
+        .central{
+            height: 300px;
+            justify-content: center
+        }
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+ </style>
+</head>
+<body>
+
+    <h1>FLEX BOX</h1>
+        <div class="flex">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+    <section class="h2">
+        <ul class="flex-container row">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul>
+
+        <ul class="flex-container row-reverse">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul>
+
+        <ul class="flex-container column">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul>
+
+        <ul class="flex-container column-reverse">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul> 
+    </section>
+
+        <h1>No wrap</h1>
+        <div class="flex-container-wrap">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+
+        <h1>Wrap</h1>
+        <div class="flex-container-wrap wrap">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+
+        <h1>Wrap Reverse</h1>
+        <div class="flex-container-wrap wrap-reverse">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+
+        <h1>No wrap Column</h1>
+        <div class="flex-container-wrap-column h">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+
+        <h1>Wrap Column</h1>
+        <div class="flex-container-wrap-column wrap">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+
+        <h1>Wrap Column Reverse</h1>
+        <div class="flex-container-wrap-column wrap-reverse">
+            <div class="item-wrap blue">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap red">4</div>
+            <div class="item-wrap violet">5</div>
+        </div>
+    
+        <h1>Justify</h1>
+        <h2>Flex Direction: Row</h2>
+        <h3>Flex Start</h3>
+    <section class="flex flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </section>
+
+        <h3>Flex End</h3>
+    <section class="flex flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </section>
+
+        <h3>Flex Center</h3>
+    <section class="flex flex-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div> 
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </section>
+
+        <h3>Flex Space Between</h3>
+    <section class="flex flex-space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div> 
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </section>
+
+        <h3>Flex Space Around</h3>
+    <section class="flex flex-space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div> 
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </section>
+
+        <h2>Flex Direction: Column</h2>
+        <h3>Flex Start</h3>
+    <section class="flex flex-start column2">
+        <div class="item-column">Item 1</div>
+        <div class="item-column">Item 2</div>
+        <div class="item-column">Item 3</div>
+        <div class="item-column">Item 4</div>
+        <div class="item-column">Item 5</div>
+    </section>
+
+        <h3>Flex End</h3>
+    <section class="flex flex-end column2">
+        <div class="item-column">Item 1</div>
+        <div class="item-column">Item 2</div>
+        <div class="item-column">Item 3</div>
+        <div class="item-column">Item 4</div>
+        <div class="item-column">Item 5</div>
+    </section>
+
+        <h3>Flex Center</h3>
+    <section class="flex flex-center column2">
+        <div class="item-column">Item 1</div>
+        <div class="item-column">Item 2</div>
+        <div class="item-column">Item 3</div> 
+        <div class="item-column">Item 4</div>
+        <div class="item-column">Item 5</div>
+    </section>
+
+        <h3>Flex Space Between</h3>
+    <section class="flex flex-space-between column2">
+        <div class="item-column">Item 1</div>
+        <div class="item-column">Item 2</div>
+        <div class="item-column">Item 3</div> 
+        <div class="item-column">Item 4</div>
+        <div class="item-column">Item 5</div>
+    </section>
+
+        <h3>Flex Space Around</h3>
+    <section class="flex flex-space-around column2">
+        <div class="item-column">Item 1</div>
+        <div class="item-column">Item 2</div>
+        <div class="item-column">Item 3</div> 
+        <div class="item-column">Item 4</div>
+        <div class="item-column">Item 5</div>
+    </section>
+
+        <h1>Align Item</h1>
+        <h2>Flex Direction: Row</h2>
+        <h3>Center</h3>
+    <section class="flex align-item-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto.</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+    </section>
+
+    <h3>Stretch</h3>
+    <section class="flex align-item-stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto.</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+    </section>
+
+    <h3>Flex Start</h3>
+    <section class="flex align-item-flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto.</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+    </section>
+
+    <h3>Flex End</h3>
+    <section class="flex align-item-flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto.</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+    </section>
+
+    <h3>Baseline</h3>
+    <section class="flex align-item-baseline">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Lorem ipsum dolor sit amet</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto.</div>
+        <div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+    </section>
+
+    <h2>Flex Direction: Column</h2>
+    <h3>Center</h3>
+<section class="flex align-item-center column2">
+    <div class="item-column">Item 1</div>
+    <div class="item-column">Item 2</div>
+    <div class="item-column">Lorem ipsum dolor sit amet</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto.</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+<h3>Stretch</h3>
+<section class="flex align-item-stretch column2">
+    <div class="item-column">Item 1</div>
+    <div class="item-column">Item 2</div>
+    <div class="item-column">Lorem ipsum dolor sit amet</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto.</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+<h3>Flex Start</h3>
+<section class="flex align-item-flex-start column2">
+    <div class="item-column">Item 1</div>
+    <div class="item-column">Item 2</div>
+    <div class="item-column">Lorem ipsum dolor sit amet</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto.</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+<h3>Flex End</h3>
+<section class="flex align-item-flex-end column2">
+    <div class="item-column">Item 1</div>
+    <div class="item-column">Item 2</div>
+    <div class="item-column">Lorem ipsum dolor sit amet</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto.</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+<h3>Baseline</h3>
+<section class="flex align-item-baseline column2">
+    <div class="item-column"><br>Item 1</div>
+    <div class="item-column">Item 2</div>
+    <div class="item-column">Lorem ipsum dolor sit amet</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto.</div>
+    <div class="item-column">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+<h1>Alinhamento central à tela<h1>
+<section class="container central align-item-center"> 
+<div class="item">Lorem ipsum dolor sit amet, com mais texto além do anterior</div>
+</section>
+
+</body>
+</html>
