@@ -11,6 +11,8 @@ Repositório Criado para Desafios de Bootcamp, Exercícios de code e Projetos In
 
    - Exercícios de CSS Flexbox
 
+   - Projeto CSS Flexbox
+
 - Bootcamp Capgemini
 
 ## Links Úteis

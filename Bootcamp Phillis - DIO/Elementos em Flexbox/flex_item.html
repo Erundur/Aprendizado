@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Flex Item</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 300px;
+        }
+
+        .item{
+            background-color: orange;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .fg-3{
+            flex-grow: 3;
+        }
+
+        .bauto{
+            flex-basis: auto;
+        }
+
+        .b-0{
+            flex-basis: 0;
+        }
+             </style>
+</head>
+<body>
+    <h1>FLEX ITEM</h1>
+
+    <h2>Flex Grow</h2>
+
+    <h3>Flex Grow 0</h3>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
+    </div>
+
+    <h3>Flex Grow 1</h3>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+
+    <h3>Flex Grow 2</h3>
+    <div class="flex-container">
+        <div class="item fg-2">A</div>
+        <div class="item fg-2">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-2">D</div>
+    </div>
+
+    <h3>Flex Grow 3</h3>
+    <div class="flex-container">
+        <div class="item fg-3">A</div>
+        <div class="item fg-3">B</div>
+        <div class="item fg-3">C</div>
+        <div class="item fg-3">D</div>
+    </div>
+
+    <h3>Flex Grow Mix</h3>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-3">D</div>
+    </div>
+
+    <h3>Flex Grow 2 Conteúdos Diversos</h3>
+    <div class="flex-container">
+        <div class="item fg-2">AAA</div>
+        <div class="item fg-2">BBBB</div>
+        <div class="item fg-2">CCCCC</div>
+        <div class="item fg-2">DDDDDD</div>
+    </div>
+
+    <h3>Flex Grow Mix Conteúdos Diversos</h3>
+    <div class="flex-container">
+        <div class="item fg-0">AAA</div>
+        <div class="item fg-1">BBBB</div>
+        <div class="item fg-2">CCCCC</div>
+        <div class="item fg-3">DDDDDD</div>
+    </div>
+
+    <h2>Flex Basis</h2>
+
+    <h3>Flex Basis Auto</h3>
+    <div class="flex-container">
+        <div class="item fg-1 bauto">A</div>
+        <div class="item fg-1 bauto">BBB</div>
+        <div class="item fg-0 bauto">C</div>
+        <div class="item fg-2 bauto">DEF</div>
+    </div>
+
+    <h3>Flex Basis Zero</h3>
+    <div class="flex-container">
+        <div class="item fg-1 b-0">A</div>
+        <div class="item fg-1 b-0">BBB</div>
+        <div class="item fg-0 b-0">C</div>
+        <div class="item fg-2 b-0">DEFG</div>
+    </div>
+
+    <h3>Flex Grow 2</h3>
+    <div class="flex-container">
+        <div class="item fg-2">A</div>
+        <div class="item fg-2">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-2">D</div>
+    </div>
+
+    <h3>Flex Grow 3</h3>
+    <div class="flex-container">
+        <div class="item fg-3">A</div>
+        <div class="item fg-3">B</div>
+        <div class="item fg-3">C</div>
+        <div class="item fg-3">D</div>
+    </div>
+
+    <h3>Flex Grow Mix</h3>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-3">D</div>
+    </div>
+
+    <h3>Flex Grow 2 Conteúdos Diversos</h3>
+    <div class="flex-container">
+        <div class="item fg-2">AAA</div>
+        <div class="item fg-2">BBBB</div>
+        <div class="item fg-2">CCCCC</div>
+        <div class="item fg-2">DDDDDD</div>
+    </div>
+
+    <h3>Flex Grow Mix Conteúdos Diversos</h3>
+    <div class="flex-container">
+        <div class="item fg-0">AAA</div>
+        <div class="item fg-1">BBBB</div>
+        <div class="item fg-2">CCCCC</div>
+        <div class="item fg-3">DDDDDD</div>
+    </div>
+</body>
+</html>
