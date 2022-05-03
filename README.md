@@ -13,6 +13,8 @@ Repositório Criado para Desafios de Bootcamp, Exercícios de code e Projetos In
 
    - Projeto CSS Flexbox
 
+   - Sintaxe Básica JavaScript
+
 - Bootcamp Capgemini
 
 ## Links Úteis
@@ -26,3 +28,8 @@ Repositório Criado para Desafios de Bootcamp, Exercícios de code e Projetos In
 [PEXELS - Imagens Gratuitas] (https://www.pexels.com/pt-br/)
 
 [Proway - Cursos de Formação] (https://proway.com.br)
+
+[Glosário JavaScript] (https://developer.mozilla.org/pt-BR/docs/Glossary/JavaScript)
+
+[O que é JavaScript] (http://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+
