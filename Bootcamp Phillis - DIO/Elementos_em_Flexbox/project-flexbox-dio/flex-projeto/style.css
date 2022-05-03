@@ -87,14 +87,14 @@ header .list-items{
 }
 
 #quem-somos h2{
-    font-size: 48px;
+    font-size: 38px;
     color: #122A57;
     display: flex;
 }
 
 #quem-somos h2::before{
     content: "";
-    height: 48px;
+    height: 38px;
     width: 5px;
     margin-right: 5px;
     background-color: #122A57;
@@ -123,13 +123,14 @@ header .list-items{
 
 #servicos h2{
     color: white;
-    font-size: 48px;
+    font-size: 38px;
     margin-bottom: 30px;
 }
 
 #servicos p{
     color: white;
     text-align: center;
+    margin: 15px;
 }
 
 #servicos .list-servicos{
@@ -137,16 +138,40 @@ header .list-items{
     justify-content: space-around;
 }
 
-.list-servico .item-servicos{
+.list-servicos .item-servicos{
     text-align: center;
 }
 
 .item-servicos a{
-    background-color: white;
-    color:#122A57;
+    width: 220px;
+    background-color: white;    
+    border-radius: 30px;
+    height: 50px;
     text-align: center;
+    margin: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color:#122A57;
+    font-size: 12px;
     text-decoration: none;
-    border-radius: 45px;
-    min-height: 30px;
-    line-height: 200%;
+    font-weight: 700;
+    border: 2px solid red;
+}
+
+.item-servicos p{
+    font-weight: 700;
+    font-size: 18px;
+    margin: 20px;
+    border: 2px solid white;
+}
+
+.item-servicos img{
+    width: 80%;
+    margin: auto;
+    border: 2px solid white;
+}
+
+.img-ajuste{
+    max-width: 160px;
+    max-height: 160px;
 }
